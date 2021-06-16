@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Books</title>
+</head>
+<body>
+
+<a href="/create">Add book</a>
+
+{% if (books) %}
+    <ol>
+        {% for book in books %}
+            <li value="{{ book.id }}">
+                {{ book.name }}
+            </li>
+        {% endfor %}
+    </ol>
+{% else %}
+    <div>
+        No books. Cumming soon!
+    </div>
+{% endif %}
+</body>
+</html>
