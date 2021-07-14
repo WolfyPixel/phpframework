@@ -273,7 +273,7 @@ class Parser
         $AST = $this->QueryLanguage();
 
         // Process any deferred validations of some nodes in the AST.
-        // This also allows post-processing of the AST for modification purposes.
+        // This also allows posts-processing of the AST for modification purposes.
         $this->processDeferredIdentificationVariables();
 
         if ($this->deferredPartialObjectExpressions) {

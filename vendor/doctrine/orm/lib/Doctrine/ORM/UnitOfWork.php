@@ -965,7 +965,7 @@ class UnitOfWork implements PropertyChangedListener
             }
 
             // Some identifiers may be foreign keys to new entities.
-            // In this case, we don't have the value yet and should treat it as if we have a post-insert generator
+            // In this case, we don't have the value yet and should treat it as if we have a posts-insert generator
             if (! $this->hasMissingIdsWhichAreForeignKeys($class, $idValue)) {
                 $this->entityIdentifiers[$oid] = $idValue;
             }
@@ -1097,7 +1097,7 @@ class UnitOfWork implements PropertyChangedListener
         $postInsertIds = $persister->executeInserts();
 
         if ($postInsertIds) {
-            // Persister returned post-insert IDs
+            // Persister returned posts-insert IDs
             foreach ($postInsertIds as $postInsertId) {
                 $idField = $class->getSingleIdentifierFieldName();
                 $idValue = $this->convertSingleFieldIdentifierToPHPValue($class, $postInsertId['generatedId']);
@@ -1247,7 +1247,7 @@ class UnitOfWork implements PropertyChangedListener
         // See if there are any new classes in the changeset, that are not in the
         // commit order graph yet (don't have a node).
         // We have to inspect changeSet to be able to correctly build dependencies.
-        // It is not possible to use IdentityMap here because post inserted ids
+        // It is not possible to use IdentityMap here because posts inserted ids
         // are not yet available.
         $newNodes = [];
 

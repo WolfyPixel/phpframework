@@ -33,7 +33,7 @@ abstract class AbstractIdGenerator
     abstract public function generate(EntityManager $em, $entity);
 
     /**
-     * Gets whether this generator is a post-insert generator which means that
+     * Gets whether this generator is a posts-insert generator which means that
      * {@link generate()} must be called after the entity has been inserted
      * into the database.
      *

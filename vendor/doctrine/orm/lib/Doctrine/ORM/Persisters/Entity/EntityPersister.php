@@ -124,12 +124,12 @@ interface EntityPersister
     public function addInsert($entity);
 
     /**
-     * Executes all queued entity insertions and returns any generated post-insert
+     * Executes all queued entity insertions and returns any generated posts-insert
      * identifiers that were created as a result of the insertions.
      *
      * If no inserts are queued, invoking this method is a NOOP.
      *
-     * @return array An array of any generated post-insert IDs. This will be an empty array
+     * @return array An array of any generated posts-insert IDs. This will be an empty array
      *               if the entity class does not use the IDENTITY generation strategy.
      */
     public function executeInserts();

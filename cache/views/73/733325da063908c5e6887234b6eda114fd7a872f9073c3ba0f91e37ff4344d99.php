@@ -12,7 +12,7 @@ use Twig\Sandbox\SecurityNotAllowedFunctionError;
 use Twig\Source;
 use Twig\Template;
 
-/* home.twig */
+/* home.html */
 class __TwigTemplate_7900a2e7f49f6f8f790605ea6eef683beaa529f52ed831940dedcac3adc34f6f extends \Twig\Template
 {
     private $source;
@@ -48,7 +48,7 @@ class __TwigTemplate_7900a2e7f49f6f8f790605ea6eef683beaa529f52ed831940dedcac3adc
 
     public function getTemplateName()
     {
-        return "home.twig";
+        return "home.html";
     }
 
     public function getDebugInfo()
@@ -58,6 +58,6 @@ class __TwigTemplate_7900a2e7f49f6f8f790605ea6eef683beaa529f52ed831940dedcac3adc
 
     public function getSourceContext()
     {
-        return new Source("", "home.twig", "C:\\_programs\\OpenServer\\domains\\framework.test\\views\\home.twig");
+        return new Source("", "home.html", "C:\\_programs\\OpenServer\\domains\\framework.test\\views\\home.html");
     }
 }
