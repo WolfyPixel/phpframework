@@ -128,14 +128,14 @@ For the `GET`, `POST`, `PUT`, `PATCH`, `DELETE` and `HEAD` request methods short
 
 ```php
 $r->get('/get-route', 'get_handler');
-$r->post('/post-route', 'post_handler');
+$r->post('/posts-route', 'post_handler');
 ```
 
 Is equivalent to:
 
 ```php
 $r->addRoute('GET', '/get-route', 'get_handler');
-$r->addRoute('POST', '/post-route', 'post_handler');
+$r->addRoute('POST', '/posts-route', 'post_handler');
 ```
 
 #### Route Groups

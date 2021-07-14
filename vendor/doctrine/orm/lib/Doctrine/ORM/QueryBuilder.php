@@ -1440,7 +1440,7 @@ class QueryBuilder
 
         return ($options['pre'] ?? '')
              . (is_array($queryPart) ? implode($options['separator'], $queryPart) : $queryPart)
-             . ($options['post'] ?? '');
+             . ($options['posts'] ?? '');
     }
 
     /**

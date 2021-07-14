@@ -14,7 +14,7 @@ class RouteCollectorTest extends TestCase
         $r->get('/get', 'get');
         $r->head('/head', 'head');
         $r->patch('/patch', 'patch');
-        $r->post('/post', 'post');
+        $r->post('/posts', 'posts');
         $r->put('/put', 'put');
 
         $expected = [
@@ -22,7 +22,7 @@ class RouteCollectorTest extends TestCase
             ['GET', '/get', 'get'],
             ['HEAD', '/head', 'head'],
             ['PATCH', '/patch', 'patch'],
-            ['POST', '/post', 'post'],
+            ['POST', '/posts', 'posts'],
             ['PUT', '/put', 'put'],
         ];
 
@@ -37,7 +37,7 @@ class RouteCollectorTest extends TestCase
         $r->get('/get', 'get');
         $r->head('/head', 'head');
         $r->patch('/patch', 'patch');
-        $r->post('/post', 'post');
+        $r->post('/posts', 'posts');
         $r->put('/put', 'put');
 
         $r->addGroup('/group-one', function (DummyRouteCollector $r) {
@@ -45,7 +45,7 @@ class RouteCollectorTest extends TestCase
             $r->get('/get', 'get');
             $r->head('/head', 'head');
             $r->patch('/patch', 'patch');
-            $r->post('/post', 'post');
+            $r->post('/posts', 'posts');
             $r->put('/put', 'put');
 
             $r->addGroup('/group-two', function (DummyRouteCollector $r) {
@@ -53,7 +53,7 @@ class RouteCollectorTest extends TestCase
                 $r->get('/get', 'get');
                 $r->head('/head', 'head');
                 $r->patch('/patch', 'patch');
-                $r->post('/post', 'post');
+                $r->post('/posts', 'posts');
                 $r->put('/put', 'put');
             });
         });
@@ -70,19 +70,19 @@ class RouteCollectorTest extends TestCase
             ['GET', '/get', 'get'],
             ['HEAD', '/head', 'head'],
             ['PATCH', '/patch', 'patch'],
-            ['POST', '/post', 'post'],
+            ['POST', '/posts', 'posts'],
             ['PUT', '/put', 'put'],
             ['DELETE', '/group-one/delete', 'delete'],
             ['GET', '/group-one/get', 'get'],
             ['HEAD', '/group-one/head', 'head'],
             ['PATCH', '/group-one/patch', 'patch'],
-            ['POST', '/group-one/post', 'post'],
+            ['POST', '/group-one/posts', 'posts'],
             ['PUT', '/group-one/put', 'put'],
             ['DELETE', '/group-one/group-two/delete', 'delete'],
             ['GET', '/group-one/group-two/get', 'get'],
             ['HEAD', '/group-one/group-two/head', 'head'],
             ['PATCH', '/group-one/group-two/patch', 'patch'],
-            ['POST', '/group-one/group-two/post', 'post'],
+            ['POST', '/group-one/group-two/posts', 'posts'],
             ['PUT', '/group-one/group-two/put', 'put'],
             ['GET', '/admin-some-info', 'admin-some-info'],
             ['GET', '/admin-more-info', 'admin-more-info'],

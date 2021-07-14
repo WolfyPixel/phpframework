@@ -3,7 +3,6 @@
 
 namespace App\Models;
 
-
 use Doctrine\ORM\Mapping as ORM;
 use Framework\ORM\Model;
 
@@ -11,8 +10,8 @@ use Framework\ORM\Model;
  * @ORM\Entity
  * @ORM\Table(name="books")
  */
-
 class Book extends Model{
+
     /**
      * @ORM\Id
      * @ORM\Column(type="integer")
@@ -25,25 +24,16 @@ class Book extends Model{
      */
     protected $name;
 
-
-    /**
-     * @param mixed $name
-     */
-    public function setName($name): void {
-        $this->name = $name;
+    public function getId() {
+        return $this->id;
     }
 
-    /**
-     * @return mixed
-     */
     public function getName() {
         return $this->name;
     }
 
-    /**
-     * @return mixed
-     */
-    public function getId() {
-        return $this->id;
+    public function setName($name): void {
+        $this->name = $name;
     }
+
 }

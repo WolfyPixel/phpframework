@@ -118,7 +118,7 @@ class CommitOrderCalculator
 
     /**
      * Return a valid order list of all current nodes.
-     * The desired topological sorting is the reverse post order of these searches.
+     * The desired topological sorting is the reverse posts order of these searches.
      *
      * {@internal Highly performance-sensitive method.}
      *
