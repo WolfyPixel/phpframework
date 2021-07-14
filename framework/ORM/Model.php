@@ -22,4 +22,10 @@ class Model
         $manager->persist($this);
         $manager->flush();
     }
+    function remove(){
+        $manager=app(DatabaseProvider::class)->manager();
+
+        $manager->remove($this);
+        $manager->flush();
+    }
 }
